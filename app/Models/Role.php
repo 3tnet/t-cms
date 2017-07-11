@@ -17,12 +17,7 @@ class Role extends BaseModel implements EntrustRoleInterface
     protected $fillable = ['name', 'display_name', 'description', 'order'];
     protected static $allowSortFields = ['id', 'name', 'display_name', 'order'];
     protected static $allowSearchFields = ['id', 'name', 'display_name', 'description'];
-    /**
-     * The database table used by the model.
-     *
-     * @var string
-     */
-    protected $table;
+
 
     /**
      * Creates a new instance of the model.
