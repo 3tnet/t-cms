@@ -9,6 +9,7 @@ use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use Illuminate\Foundation\Auth\Access\Authorizable;
 use Illuminate\Notifications\Notifiable;
 use Ty666\PictureManager\Traits\Picture;
 use Zizaco\Entrust\Traits\EntrustUserTrait;
@@ -20,8 +21,13 @@ class User extends BaseModel implements
 {
     use Authenticatable, CanResetPassword;
     use Notifiable, Picture, Listable;
+    use Authorizable {
+        Authorizable::can as may;
+        EntrustUserTrait::can insteadof Authorizable;
+    }
     use EntrustUserTrait {
         restore as private restoreEntrust;
+
     }
 
     protected static $allowSortFields = ['id', 'user_name', 'nick_name', 'created_at', 'is_locked'];
