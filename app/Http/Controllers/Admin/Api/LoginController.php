@@ -9,8 +9,6 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
-use Predis\Connection\ConnectionException;
-use Symfony\Component\HttpKernel\Exception\HttpException;
 use Validator;
 
 class LoginController extends ApiController

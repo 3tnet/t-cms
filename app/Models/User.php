@@ -27,7 +27,6 @@ class User extends BaseModel implements
     }
     use EntrustUserTrait {
         restore as private restoreEntrust;
-
     }
 
     protected static $allowSortFields = ['id', 'user_name', 'nick_name', 'created_at', 'is_locked'];

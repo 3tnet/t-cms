@@ -1,7 +1,8 @@
 <?php
+
 Route::get('/', 'IndexController@index')->name('index');
-Route::get('/category/{cateSlug}', 'IndexController@postList')->name('category');
-Route::get('/category/{cateSlug}/post/{post}', 'IndexController@post')->name('post');
+Route::get('/category/{cateSlug}', 'CategoriesController@show')->name('category');
+Route::get('/category/{cateSlug}/post/{post}', 'PostsController@show')->name('post');
 
 Route::group(
     ['middleware' => 'auth'], function () {
