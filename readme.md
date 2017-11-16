@@ -10,6 +10,8 @@
 <a href="https://packagist.org/packages/3tnet/t-cms"><img src="https://poser.pugx.org/3tnet/t-cms/license.svg" alt="License"></a>
 </p>
 
+# 此项目已过时 新项目参加：https://github.com/3tnet/tiny
+
 ## About t-cms
 
 t-cms is a simple cms based on laravel.
